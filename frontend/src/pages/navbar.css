@@ -1,0 +1,70 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 100vh;
+  background-color: #c8102e; /* EARIST Red */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar-logo {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 5px;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.sidebar-header p {
+  font-size: 0.9rem;
+  color: #ffea00; /* Yellow accent */
+  margin: 4px 0 0 0;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sidebar-link {
+  display: block;
+  width: 100%;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-left: 15px;
+  margin-right: -150px;
+
+
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: background 0.3s, margin-left 0.3s;
+  
+}
+
+
+.sidebar-link:hover {
+  background-color: #a50e24;
+  cursor: pointer;
+  margin-left: 8px;
+  padding-left: 20px; /* 👈 slight right slide effect */
+}

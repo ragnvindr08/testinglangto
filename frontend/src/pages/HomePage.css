@@ -1,0 +1,191 @@
+/* ============================= */
+/* 📘 General Layout with Sidebar */
+/* ============================= */
+.homepage {
+  display: flex;
+  flex-direction: row;
+  background-color: #f8f9fb;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+}
+
+/* Sidebar (already handled in sidebar.css) */
+.sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  background-color: #a50e24;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+/* ===================== */
+/* 📊 Dashboard Main Area */
+/* ===================== */
+.dashboard-content {
+  margin-left: 240px; /* same as sidebar width */
+  padding: 25px 40px;
+  width: calc(100% - 240px);
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+/* Responsive layout if sidebar collapses or on smaller screens */
+@media (max-width: 768px) {
+  .dashboard-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/* ========================= */
+/* 🧱 Dashboard Header Cards */
+/* ========================= */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  color: #a50e24;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.dashboard-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 25px;
+  text-align: center;
+  flex: 1 1 220px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* ========================= */
+/* 🏢 Add Company Form */
+/* ========================= */
+.add-company {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.add-company h2 {
+  margin-bottom: 15px;
+  color: #a50e24;
+  font-size: 20px;
+}
+
+.add-company form {
+  display: grid;
+  gap: 12px;
+  max-width: 400px;
+}
+
+.add-company input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.2s;
+}
+
+.add-company input:focus {
+  border-color: #a50e24;
+}
+
+.add-company button {
+  background-color: #a50e24;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-company button:hover {
+  background-color: #7c0c1d;
+}
+
+/* ========================= */
+/* 📋 Data Tables & Sections */
+/* ========================= */
+.data-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.data-section h2 {
+  margin-bottom: 15px;
+  color: #a50e24;
+  font-size: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  border-bottom: 1px solid #eee;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: 600;
+}
+
+td {
+  color: #444;
+}
+
+button.delete-btn {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button.delete-btn:hover {
+  background-color: #b71c1c;
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  table {
+    font-size: 14px;
+  }
+  th,
+  td {
+    padding: 8px;
+  }
+}
